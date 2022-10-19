@@ -1,0 +1,84 @@
+
+{% load staticfiles %}
+
+{% block title %}
+    All Record
+{% endblock title %}
+
+
+
+{% block meta-scripts %}
+<style type="text/css">
+    @page {size: {{ pagesize }};margin: 1cm;}
+ 
+.panel {
+  margin-bottom: 21px;
+  margin-left:21px;
+  background-color: #ffffff;
+  
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  } 
+
+.panel-heading h3{
+    margin-left: 40%;
+    margin-right: auto;
+    
+  } 
+
+#detail {
+    margin-top: 5%;
+}
+
+#htab{
+    width: 50%;
+    margin-left:20%
+}
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class="panel">
+<h3>Summary</h3>
+        Total cars:{{total}}<br>
+        Charged Customers:{{Chrg}}<br>
+        Uncharged Customers:{{Unchrg}}<br>
+<div id="detail">
+<div class="panel-heading" ><h3>Detail</h3></div>
+<div  class="panel-body">
+    <table id="htab">
+        <tr style="background-color: rgb(72, 179, 76);" >
+            <td><strong>Car Number</strong></td>
+            <td><strong>Slot Number</strong></td>
+            <td><strong>Duration</strong></td>
+            <td><strong>Charged</strong></td>
+        </tr>      
+        {% for car in cars %}
+            <tr>
+                <td>{{car.car_no}}</td>
+                <td>{{car.slot_no}}</td>
+                <td>{{car.get_limit_display}}</td>
+                <td> 
+                    {{car.charged}}
+                </td>
+            </tr>    
+        {% endfor %}           
+    </table>
+</div>
+</div>
+</div>
+{% endblock %}
+    
+
+
+        
+    

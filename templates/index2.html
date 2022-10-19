@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="{% static "css/font-face.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/font-awesome-4.7/css/font-awesome.min.css"%}" rel="stylesheet" media="all">
+    <link href="{% static  "vendor/font-awesome-5/css/fontawesome-all.min.css"%}" rel="stylesheet" media="all">
+    <link href="{% static  "vendor/mdi-font/css/material-design-iconic-font.min.css"%}" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="{% static "vendor/bootstrap-4.1/bootstrap.min.css" %}" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="{% static "vendor/animsition/animsition.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/wow/animate.css"  %}"rel="stylesheet" media="all">
+    <link href="{% static "vendor/css-hamburgers/hamburgers.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/slick/slick.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/select2/select2.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static  "vendor/perfect-scrollbar/perfect-scrollbar.css" %}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{% static "css/theme.css" %}"rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<style>
+	.btn{
+        padding:5%;
+		width:150%;
+		background-color:#4da6ff;
+		color:grey;
+		border:1px solid black;
+		
+    }
+    .btn:hover{
+        padding-top:5px;
+		background-color:green;
+        box-color:0 0 10px green, 0 0 40px green, 0 0 80px green;
+        pointer:cursor;
+        color:white;
+    }
+	.btn2{
+		padding:5%;
+		width:100%;
+		background-color:black;
+		border:0px;
+		border-color:black;
+		outline:none;
+		display:none;
+	}
+	.btn3{
+        padding:5%;
+		width:130%;
+		background-color:#4da6ff;
+		color:grey;
+		border:1px solid black;
+		border-radius:5%;
+		
+    }
+    .btn3:hover{
+        background-color:green;
+        pointer:cursor;
+        color:white;
+		box-color:0 0 10px green, 0 0 40px green, 0 0 80px green;
+    }
+    .jumbotron{
+        background-color:black;
+        color:black;
+        opacity:0.7;
+        
+    }
+    .big-banner{
+        background-image: url({% static 'images/carrrs.jpg' %});
+        background-size:100%;
+    }
+	.tx-t{
+		color:white;
+		border-bottom:2px solid grey;
+		font-size:50px;
+	}
+.lbtn
+{
+	position:relative;
+	display:inline-block;
+	padding:15px 30px;
+	color:#4da6ff;
+	text-transform:uppercase;
+	letter-spacing:4px;
+	text-decoration:none;
+	font-size:24px;
+	overflow:hidden;
+	transition:0.2s;
+}
+.lbtn:hover{
+	color:white;
+	background:#4da6ff;
+	box-shadow:0 0 10px #4da6ff, 0 0 40px #4da6ff, 0 0 80px #4da6ff;
+	transition-display:1s;
+}
+</style>
+</head>
+
+<body class="animsition" style="height:1800px;">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none" style="background-color: rgba(223, 39, 39, 0.7)">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="FPage.html">
+                            <img src="{% static  "images/parkinglogo.jpg" %}" alt="CoolAdmin" style="height:50px; width:50px;"/>
+                            <span style="padding-left:10px; font-size:25px; color:black;"> <b>Parking Lot</b> </span>
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+           <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                             <li>
+                            <a href="{% url 'index' %}">
+                                <i class="fas fa-map-marker-alt"></i>Public Parking lots</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'index2' %}">
+                                <i class="fas fa-map-marker-alt"></i>Reserved Parking lots</a>
+                        </li>
+                       
+                        <li>
+                            <a href="{% url 'notify' %}">
+                                <i class="fas fa-bell"></i>Notifications</a>
+                        </li>
+                        
+                       <li>
+                            <a href="{% url 'form_name' %}">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+
+                        
+                        <li >
+                            <a href="{% url 'parking_list' %}">
+                                <i class="far fa-check-square"></i>All Data</a>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block" style="background-color: rgba(212, 205, 205, 0.7);">
+              <a class="logo" href="Fpage.html">
+                            <img src="{% static  "images/parkinglogo.jpg" %}" alt="CoolAdmin" style="height:50px; width:50px;"/>
+                            <span style="padding-left:10px; font-size:25px; color:black;"> <b>Parking Lot</b> </span>
+                        </a>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list" >
+
+<li>
+                            <a href="{% url 'index' %}">
+                                <i class="fas fa-map-marker-alt" style="color:orange"></i>Public Parking lots</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'index2' %}">
+                                <i class="fas fa-map-marker-alt" style="color:#4da6ff"></i>Reserved Parking lots</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="{% url 'notify' %}">
+                                <i class="fas fa-bell"></i>Notifications</a>
+                            
+                        </li>
+                        
+                        <li>
+                            <a href="{% url 'form_name' %}">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+
+                        
+                        <li >
+                            <a href="{% url 'parking_list' %}">
+                                <i class="far fa-check-square"></i>All Data</a>
+                        </li>
+                        
+                        
+                       
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container" style="height: 2220px;">
+
+        <div class="container">
+  <div class="jumbotron big-banner">
+    
+    <h1>Reserved Parking Area</h1> 
+    <p>Click the car to open the form or next to go to the next section.</p> 
+  </div>
+</div>
+
+<div class="jumbotron" style="height:2220px;padding-top:150px">
+<div class="container" style="border:2px solid grey">
+		<div class="row">
+			<div class="col-md-12"><center><h2 class="tx-t"><i class='fas fa-car-side' style="font-size:25px;color:#4da6ff"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:25px;">PARKING AREA</span>&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-car-side' style="font-size:25px;color:#4da6ff;"></i></h2></center></div>
+		</div>
+		<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 1</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 2</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 3</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 4</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 5</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 6</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 7</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"></div>
+					
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn3"><h5>R 8</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn3"><h5>R 9</h5><a href="form.html"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn3"><h5>R 10</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn3"><h5>R 11</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn3"><h5>R 12</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"><h5>R 13</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 14</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 15</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 16</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 17</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 18</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 19</h5><a href="{% url 'form_name' %}"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 20</h5><a href="form.html"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 21</h5><a href="form.html"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 22</h5><a href="form.html"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 23</h5><a href="form.html"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 24</h5><a href="form.html"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 25</h5><a href="form.html"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 26</h5><a href="form.html"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn"><h5>R 27</h5><a href="form.html"><i class='fas fa-car-side' style="font-size:15px;color:grey"></i></a></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2"></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-3 col-xs-3">
+				<div class="row">
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+					<div class="col-xl-6 col-md-6 col-xs-6"><button class="btn2" ></button></div>
+				</div>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row" style="border-top:1px solid grey">
+			<div class="col-xl-12 col-md-12 col-xs-12">
+				<br>
+			</div>
+		</div>
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-12 col-md-12 col-xs-12">
+				<br>
+			</div>
+		</div>		
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-12 col-md-12 col-xs-12">
+				<br>
+			</div>
+		</div>		
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-12 col-md-12 col-xs-12">
+				<br>
+			</div>
+		</div>		
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+		<div class="row">
+			<div class="col-xl-12 col-md-12 col-xs-12">
+				<center><button class="lbtn"><h3>Back<a href="FPage.html"></h3><i class="fas fa-arrow-alt-circle-left" style="font-size:150%;color:#4da6ff"></i><a href="FPage.html"></a></button>
+			</div>
+		</div>		
+		<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+					
+</div>
+</div>
+
+          
+               
+            
+            <!-- END PAGE CONTAINER-->
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
+    <!-- Bootstrap JS-->
+    <script src="{% static  "vendor/bootstrap-4.1/popper.min.js" %}"></script>
+    <script src="{% static  "vendor/bootstrap-4.1/bootstrap.min.js" %}"></script>
+    <!-- Vendor JS       -->
+    <script src="{% static  "vendor/slick/slick.min.js" %}">
+    </script>
+    <script src="{% static  "vendor/wow/wow.min.js" %}"></script>
+    <script src="{% static  "vendor/animsition/animsition.min.js" %}"></script>
+    <script src="{% static  "vendor/bootstrap-progressbar/bootstrap-progressbar.min.js" %}">
+    </script>
+    <script src="{% static  "vendor/counter-up/jquery.waypoints.min.js" %}"></script>
+    <script src="{% static  "vendor/counter-up/jquery.counterup.min.js" %}">
+    </script>
+    <script src="{% static  "vendor/circle-progress/circle-progress.min.js" %}"></script>
+    <script src="{% static  "vendor/perfect-scrollbar/perfect-scrollbar.js" %}"></script>
+    <script src="{% static  "vendor/chartjs/Chart.bundle.min.js" %}"></script>
+    <script src="{% static  "vendor/select2/select2.min.js" %}">
+    </script>
+
+    <!-- Main JS-->
+    <script src="{% static  "js/main.js" %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+<!-- end document-->
